@@ -1,4 +1,4 @@
-/* Shared styles used on every page */
+/* Shared styles used on every page 1  */
 * {
   box-sizing: border-box;
 }
@@ -16,7 +16,7 @@ a {
 }
 
 .main {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 24px 16px;
 }
