@@ -1,0 +1,77 @@
+/* Amazon-style "shop by category" cards on the home page */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.category-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 12px 20px;
+}
+
+.category-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.category-card-title {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.category-card-arrow {
+  font-size: 32px;
+  line-height: 1;
+}
+
+/* 2x2 grid of square photos inside each card */
+.category-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8px;
+  row-gap: 40px;
+}
+
+.category-item-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.category-item-label {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.category-item:hover .category-item-image {
+  filter: brightness(0.9);
+}
+
+.category-item:hover .category-item-label,
+.category-card-header:hover .category-card-title {
+  text-decoration: underline;
+}
+
+/* Fewer columns on smaller screens */
+@media (max-width: 1000px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
