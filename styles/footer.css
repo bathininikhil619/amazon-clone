@@ -1,0 +1,66 @@
+/* Amazon-style footer with "Back to top" bar and link columns */
+.footer {
+  margin-top: 40px;
+  color: white;
+}
+
+.footer-back-to-top {
+  display: block;
+  padding: 15px;
+  text-align: center;
+  font-size: 13px;
+  background-color: #37475a;
+}
+
+.footer-back-to-top:hover {
+  background-color: #485769;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 80px;
+  padding: 40px 16px 50px;
+  background-color: #232f3e;
+}
+
+/* Narrow columns so long links wrap onto two lines */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 180px;
+}
+
+.footer-column-title {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.footer-link {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #ddd;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Tighter spacing on smaller screens */
+@media (max-width: 1000px) {
+  .footer-links {
+    gap: 32px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-links {
+    justify-content: flex-start;
+  }
+  .footer-column {
+    flex-basis: 40%;
+  }
+}
